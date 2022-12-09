@@ -83,7 +83,7 @@ jobs:
         env:
           REGISTRY: ghcr.io
           IMAGE_NAME: ${{ github.repository }}
-          ECR_REPOSITORY: ${{ github.repository }}
+          ECR_REPOSITORY: soldavidcloud/vulnerabilities-scanner-template
           IMAGE_TAG: ${{ env.IMAGE_TAG }}
         run: |
           echo REGISTRY: $REGISTRY
