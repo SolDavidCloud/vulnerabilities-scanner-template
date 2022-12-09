@@ -12,12 +12,11 @@ def get_logs_client():
     else:
         return boto3.client(
             "logs",
-            aws_access_key_id="ASIA36TW6WSZM3L2Y6OS",
+            aws_access_key_id="Remove it!",
             aws_secret_access_key="Remove it!",
             region_name=region_name,          
             endpoint_url="http://localhost:4566",
         )
-#token= "22lyl_8yoba93u0__1e7l70ft-6jnjv2"
 
 def lambda_handler(event,context):
     """Lambda handler or main"""
