@@ -32,6 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [gitleaks, truffleHog]
     name: Pycharm-security check
+    if: ${{ false }}
     steps:
       - name: checkout git repository
         uses: actions/checkout@v3
@@ -39,7 +40,7 @@ jobs:
       - name: Run PyCharm Security
         uses: tonybaloney/pycharm-security@master
         with:
-          fail_on_warnings: true
+          fail_on_warnings: false
 
   docker-grype-project:
     name: Grype (Anchore) Project Scan
